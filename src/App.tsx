@@ -318,7 +318,7 @@ function App() {
           <div className="success-message">
             <div className="image-container">
               <motion.img 
-                src="/leila.jpg.png" 
+                src={`${import.meta.env.BASE_URL}leila.jpg.png`} 
                 alt="Leila" 
                 className="valentine-image success-image"
                 initial={{ opacity: 1, scale: 1, x: 0, y: 0, rotate: 0 }}
