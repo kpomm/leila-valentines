@@ -14,7 +14,7 @@ function App() {
   const [imageAnimating, setImageAnimating] = useState(false)
   const noButtonRef = useRef<HTMLButtonElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
-  const messageTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const messageTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const messageRef = useRef<HTMLDivElement>(null)
 
   const niceTryMessages = [
@@ -262,7 +262,7 @@ function App() {
           <>
             <div className="image-container">
               <motion.img 
-                src="/leila.jpg.png" 
+                src={`${import.meta.env.BASE_URL}leila.jpg.png`} 
                 alt="Leila" 
                 className="valentine-image"
                 initial={{ opacity: 0, y: -20 }}
